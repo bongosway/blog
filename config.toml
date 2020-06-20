@@ -101,32 +101,29 @@ disableHugoGeneratorInject = false
   # Social icons
   [[params.social]]
     name = "twitter"
-    url  = "https://twitter.com/"
+    url  = "https://twitter.com/bongosway"
 
   [[params.social]]
     name = "email"
-    url  = "mailto:nobody@example.com"
+    url  = "mailto:dumbdev@gmail.com"
 
   [[params.social]]
     name = "github"
-    url  = "https://github.com/"
+    url  = "https://github.com/bongosway"
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/"
+    url  = "https://www.linkedin.com/edirinatumah"
 
-  [[params.social]]
-    name = "stackoverflow"
-    url  = "https://www.stackoverflow.com/"
-
+  
 [languages]
   [languages.en]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = ""
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
   [languages.fr]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = ""
     weight    = 2
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
