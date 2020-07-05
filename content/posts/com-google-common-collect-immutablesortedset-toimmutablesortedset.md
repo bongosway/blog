@@ -10,10 +10,28 @@ tags:
 
 ## Introduction
 Whilst building a demo application showcasing google 
-[AutoService](https://github.com/google/auto/tree/master/service). 
-Whilst searching through the internet I discoverd most solutions recommended upgrading the [Google Guava](https://github.com/google/guava) version, but upgrading the version did not resolve my problem.
+[AutoService](https://github.com/google/auto/tree/master/service), I encountered the below error:
 
-In this guide, you will configure **AutoService** using `maven` to register the right implementation of types using META-INF metadata.
+```
+ java.lang.NoSuchMethodError: com.google.common.collect.ImmutableSet.toImmutableSet()Ljava/util/stream/Collector;
+```
+Searching through the internet I discoverd most solutions recommended upgrading the [Google Guava](https://github.com/google/guava) version, but upgrading the version did not resolve my problem.
+
+The main cause of this error, is putting the wrong `Autoservice` dependency in the classpath. 
+
+If your POM file resembles the one below, then you are most likely get this error. 
+
+```xml
+ </dependencies>
+ 	<dependency>
+      <groupId>com.google.auto.service</groupId>
+      <artifactId>auto-service</artifactId>
+      <version>1.0-rc7</version>
+    </dependency>
+ </dependencies>
+```
+
+In this guide, you will solve the compilation error when using **AutoService** on a `maven` project to register the right implementation of types in the META-INF/services.
 
 When you're finished, you'll be able to build jar files with the right 
 `META-INF/services` information.
@@ -44,7 +62,7 @@ if the below are missing then follow step 2;
 
 ## Step 2 — Add AutoService Annotation Dependency to POM file
 
-Add the following compile-time dependency to your classpath so the project can compile
+Add the following compile-time dependency to your classpath so the project can compile and pull in the relevant classes.
 
 ```xml
 <dependencies>
@@ -112,7 +130,7 @@ Spy the content of the Jar file again, to view the generated metadata
 $  jar tf target/<jar-filename>.jar | grep META-INF/services/
 ```
 
-Assuming our processor class is `org.ihq.MyAutoclass`, then the output should resemble below 
+Assuming our processor class is `org.ihq.MyAutoclass`, this time the output should resemble below 
 
 ```
 META-INF/services/
