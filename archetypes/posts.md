@@ -1,12 +1,15 @@
-+++
+---
+author:
+  name: "Edirin Atumah"
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
 toc: false
+weight: 10
 images:
 tags:
   - untagged
-+++
+---
 
 # How To [Install/Configure/Do Something] on [Distribution]
 
