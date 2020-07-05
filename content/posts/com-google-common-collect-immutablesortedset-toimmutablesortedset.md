@@ -1,9 +1,12 @@
 ---
+author:
+  name: "Edirin Atumah"
 title: "How to solve google toImmutableSet() NoSuchMethodError on a Maven project"
-date: 2020-07-05T10:04:17+01:00
+date: 2020-07-05
 draft: false
 toc: false
 images:
+weight: 10
 tags:
   - maven, autoservice, google, toImmutableSet
 ---

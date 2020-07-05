@@ -11,7 +11,7 @@ rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
 # googleAnalytics = ""
-# disqusShortname = "bongosway.disqus.com/admin"
+disqusShortname = "bongosway.disqus.com/admin"
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -32,6 +32,12 @@ disableRSS     = false
 disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
+
+# Sharing buttons
+# There are a lot of buttons preconfigured. If you want to change them,
+# generate the buttons here: https://sharingbuttons.io
+# and add them into your own `layouts/partials/sharing-buttons.html`
+enableSharingButtons = true
 
 [permalinks]
   posts = "/posts/:year/:month/:title/"
