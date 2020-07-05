@@ -11,7 +11,7 @@ rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
 # googleAnalytics = ""
-# disqusShortname = ""
+# disqusShortname = "bongosway.disqus.com/admin"
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -40,7 +40,7 @@ disableHugoGeneratorInject = false
   name = "Edirin Atumah"
 
 [blackfriday]
-  hrefTargetBlank = true
+  hrefTargetBlank = false
 
 [taxonomies]
   tag      = "tags"
