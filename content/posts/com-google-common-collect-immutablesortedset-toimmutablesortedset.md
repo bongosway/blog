@@ -1,7 +1,7 @@
 ---
 author:
   name: "Edirin Atumah"
-title: "How to solve google toImmutableSet() NoSuchMethodError on a Maven project"
+title: "How to solve the NoSuchMethodError toImmutableSet() error when using Google Autoservice"
 date: 2020-07-05
 draft: false
 toc: false
@@ -19,11 +19,11 @@ Whilst building a demo application showcasing google
 ```
  java.lang.NoSuchMethodError: com.google.common.collect.ImmutableSet.toImmutableSet()Ljava/util/stream/Collector;
 ```
-Searching through the internet I discoverd most solutions recommended upgrading the [Google Guava](https://github.com/google/guava) version, but upgrading the version did not resolve my problem.
+Searching through the internet, most solutions recommended upgrading the [Google Guava](https://github.com/google/guava) version but that did not resolve the problem.
 
-The main cause of this error, is putting the wrong `Autoservice` dependency in the classpath. 
+The main cause of this error, was putting the wrong `Autoservice` dependency in the classpath. 
 
-If your POM file resembles the one below, then you are most likely get this error. 
+If your POM file has the below dependency, then you are most likely get this error. 
 
 ```xml
  </dependencies>
@@ -35,7 +35,7 @@ If your POM file resembles the one below, then you are most likely get this erro
  </dependencies>
 ```
 
-In this guide, you will solve the compilation error when using **AutoService** on a `maven` project to register the right implementation of types in the META-INF/services.
+In this guide, you will solve the compilation error when using **AutoService** on a `maven` project.
 
 When you're finished, you'll be able to build jar files with the right 
 `META-INF/services` information.
