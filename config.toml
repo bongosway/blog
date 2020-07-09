@@ -2,6 +2,7 @@ baseURL = "https://bongosway.github.io/"
 title   = "Thought before Tools"
 languageCode = "en-us"
 theme = "hello-friend-ng"
+relativeURLs = true
 
 
 PygmentsCodeFences = true
