@@ -1,8 +1,7 @@
-baseURL = "https://bongosway.github.io/"
-title   = "Thought before Tools"
+baseURL = "https://example.com"
+title   = "Hello Friend NG"
 languageCode = "en-us"
-theme = "hugo-theme-hello-friend-ng"
-
+theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -12,13 +11,13 @@ rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
 # googleAnalytics = ""
-disqusShortname = "bongosway"
+# disqusShortname = ""
 
 archetypeDir = "archetypes"
 contentDir   = "content"
 dataDir      = "data"
 layoutDir    = "layouts"
-publishDir   = "bongosway.github.io"
+publishDir   = "public"
 
 buildDrafts  = false
 buildFuture  = false
@@ -34,20 +33,14 @@ disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
 
-# Sharing buttons
-# There are a lot of buttons preconfigured. If you want to change them,
-# generate the buttons here: https://sharingbuttons.io
-# and add them into your own `layouts/partials/sharing-buttons.html`
-enableSharingButtons = true
-
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
 [author]
-  name = "Edirin Atumah"
+  name = "Jane Doe"
 
 [blackfriday]
-  hrefTargetBlank = false
+  hrefTargetBlank = true
 
 [taxonomies]
   tag      = "tags"
@@ -61,11 +54,11 @@ enableSharingButtons = true
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Metadata mostly used in document's head
-  description = "Thoughts of a Test Consultant"
-  keywords = "Test Automation, Selenium, BDD, Cucumber, Test Framework"
+  description = "Nice theme for homepages and blogs"
+  keywords = ""
   images = [""]
 
-  homeSubtitle = "Thoughts of a Test Consultant"
+  homeSubtitle = "Hello Friend NG"
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = ""
@@ -73,13 +66,19 @@ enableSharingButtons = true
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
 
+  # Sharing buttons
+  # There are a lot of buttons preconfigured. If you want to change them,
+  # generate the buttons here: https://sharingbuttons.io
+  # and add them into your own `layouts/partials/sharing-buttons.html`
+  enableSharingButtons = true
+
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
   customCSS = []
   customJS  = []
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
-  justifyContent = false  # Set "text-align: justify" to .content.
+  justifyContent = false  # Set "text-align: justify" to .post-content.
 
   # Default theme "light" or "dark"
   defaultTheme = "dark"
@@ -101,32 +100,42 @@ enableSharingButtons = true
     # Set to a valid CSS time value to change the animation duration, "0s" to disable.
     # logoCursorAnimate  = "2s"
 
-  [params.portrait]
-    path = "/images/profile_pic.jpg"
-    alt = "Portrait"
+  # Uncomment this if you want a portrait on your start page
+  # [params.portrait]
+  #   path     = "/img/image.jpg"
+  #   alt      = "Portrait"
+  #   maxWidth = "50px"
 
   # Social icons
   [[params.social]]
     name = "twitter"
-    url  = "https://twitter.com/bongosway"
+    url  = "https://twitter.com/"
 
   [[params.social]]
     name = "email"
-    url  = "mailto:dumbdev@gmail.com"
+    url  = "mailto:nobody@example.com"
 
   [[params.social]]
     name = "github"
-    url  = "https://github.com/bongosway"
+    url  = "https://github.com/"
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/edirinatumah"
+    url  = "https://www.linkedin.com/"
 
-  
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://www.stackoverflow.com/"
+
 [languages]
   [languages.en]
-    subtitle  = ""
+    subtitle  = "Hello Friend NG Theme"
     weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  [languages.fr]
+    subtitle  = "Hello Friend NG Theme"
+    weight    = 2
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 [menu]
