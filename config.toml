@@ -2,8 +2,7 @@ baseURL = "https://bongosway.github.io/"
 title   = "Thought before Tools"
 languageCode = "en-us"
 theme = "hello-friend-ng"
-relativeURLs = true
-uglyURLs = true
+
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -135,7 +134,6 @@ enableSharingButtons = true
     identifier = "about"
     name       = "About"
     url        = "about/"
-
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"
