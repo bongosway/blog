@@ -1,0 +1,24 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@v1
+      with:
+        submodules: true
+        
+        
+    - name: Hugo Deploy GitHub Pages
+      uses: bongosway/blog@master
+      env:
+        HUGO_VERSION: 0.72.0
+        TARGET_REPO: bongosway/bongosway.github.io
+        TOKEN: ${{ secrets.TOKEN }}
+        CNAME: bongosway.github.io
