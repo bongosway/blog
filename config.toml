@@ -7,6 +7,7 @@ theme = "hugo-theme-hello-friend-ng"
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
+
 paginate  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
@@ -75,7 +76,7 @@ enableSharingButtons = true
 
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
-  customCSS = []
+  customCSS = ["/css/all.min.css"]
   customJS  = []
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo

@@ -11,8 +11,6 @@ tags:
   - untagged
 ---
 
-# How To [Install/Configure/Do Something] on [Distribution]
-
 ## Introduction
 Introductory paragraph about the topic that explains what this topic is about and why the reader should care; what problem does it solve?
 
