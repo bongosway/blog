@@ -40,6 +40,26 @@ body {
   }
 }
 
+.admonition-content {
+    display: block;
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: .125em 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    overflow-x: auto;
+    background-color: rgba(0,0,0,.05);
+}
+
+.note {
+    border-left-width: 4px;
+    border-left-style: solid;
+    position: relative;
+    border-color: #0594cb;
+    display: block;
+}
+
 h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
@@ -111,6 +131,11 @@ figure {
   display: table;
   max-width: 100%;
   margin: 25px 0;
+
+  img {
+    box-shadow: 5px 5px 25px 0 
+    rgba(46,61,73,.4)
+  }
 
   &.left {
     margin-right: auto;
@@ -282,6 +307,10 @@ hr {
 
 .hidden {
   display: none;
+}
+
+.center {
+  text-align: center;
 }
 
 .hide-on-phone {

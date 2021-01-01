@@ -10,6 +10,8 @@ Cover:
 weight: 10
 tags:
   - maven, autoservice, google, toImmutableSet
+series:
+- PageObject
 ---
 
 ## Introduction

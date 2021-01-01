@@ -35,12 +35,25 @@
       {{- end }}
 
       {{ with .Params.Cover }}
-        <img src="/{{ . }}" class="post-cover" />
-      {{ end }}
+        <figure>
+          <img src="/{{ . }}" class="post-cover" />
+         {{ end }}
+          <figcaption>
+            <h5>{{ .Params.Credit }} </h5>
+          </figcaption>
+        </figure>
+   
 
       <div class="post-content">
         {{ .Content }}
       </div>
+
+       {{- with .Site.Params.social }}
+                <div class="center">
+                    {{ partial "social-icons.html" . }}
+                </div>
+        {{- end }}
+
     </article>
 
     <hr />

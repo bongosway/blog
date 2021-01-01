@@ -9,6 +9,8 @@ weight: 10
 Cover: "images/language.jpg"
 tags:
   - testing, selenium, testng, junit
+series:
+- PageObject
 ---
 **_The short answer is YES!_**
 
@@ -30,7 +32,6 @@ The test class should represent the domain behaviours only, not the implementati
 
 Let's examine an example:
 
-Example:
 ```java
 public class MySampleTest {
     WebDriver driver = getDriver();
