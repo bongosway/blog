@@ -1,6 +1,6 @@
-  baseURL = "https://bongosway.github.io/"
+baseURL = "https://bongosway.github.io/"
 title   = "Thought before Tools"
-languageCode = "en-us"
+languageCode = "en-gb"
 theme = "hugo-theme-hello-friend-ng"
 
 
@@ -127,7 +127,7 @@ enableSharingButtons = true
     name = "linkedin"
     url  = "https://linkedin.com/edirinatumah"
 
-  
+
 [languages]
   [languages.en]
     subtitle  = ""

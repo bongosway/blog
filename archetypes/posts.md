@@ -1,18 +1,18 @@
 ---
 author:
   name: "Edirin Atumah"
-linktitle: 
+linktitle:
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
 toc: false
 type:
 weight: 10
-images:
+Cover:
 tags:
   - untagged
 series:
-    - 
+    -
 ---
 
 ## Introduction
