@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>testing, selenium, testng, junit on Thought before Tools</title>
+    <link>https://bongosway.github.io/tags/testing-selenium-testng-junit/</link>
+    <description>Recent content in testing, selenium, testng, junit on Thought before Tools</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 12 Jul 2020 10:32:43 +0100</lastBuildDate><atom:link href="https://bongosway.github.io/tags/testing-selenium-testng-junit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should I Remove PageObjects from my Test Class?</title>
+      <link>https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/</link>
+      <pubDate>Sun, 12 Jul 2020 10:32:43 +0100</pubDate>
+      
+      <guid>https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/</guid>
+      <description>The short answer is YES!
+Introduction The Page Object Pattern is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen). Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.
+Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation.</description>
+    </item>
+    
+  </channel>
+</rss>

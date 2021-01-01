@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://bongosway.github.io/posts/my-2020-in-review-staying-strong/</loc>
+    <lastmod>2021-01-01T15:59:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</loc>
+    <lastmod>2020-09-26T03:59:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</loc>
+    <lastmod>2020-08-08T07:57:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/</loc>
+    <lastmod>2020-07-12T10:32:43+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/posts/how-to-solve-the-nosuchmethoderror-toimmutableset-error-when-using-google-autoservice/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/posts/</loc>
+    <lastmod>2021-01-01T15:59:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/tags/</loc>
+    <lastmod>2021-01-01T15:59:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/</loc>
+    <lastmod>2021-01-01T15:59:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/tags/untagged/</loc>
+    <lastmod>2021-01-01T15:59:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/series/pageobject/</loc>
+    <lastmod>2020-09-26T03:59:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/tags/selenium-automation/</loc>
+    <lastmod>2020-09-26T03:59:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/series/</loc>
+    <lastmod>2020-09-26T03:59:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/tags/testing-selenium-testng-junit/</loc>
+    <lastmod>2020-07-12T10:32:43+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/tags/maven-autoservice-google-toimmutableset/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bongosway.github.io/categories/</loc>
+  </url>
+  
+</urlset>
