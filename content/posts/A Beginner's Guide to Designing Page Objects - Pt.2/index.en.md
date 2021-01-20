@@ -117,7 +117,6 @@ The test won't concern itself about the underlying search engine in use.
 {{< /admonition >}}
 
 
-
 ![RefactoredTest](pg3.png "TestClass.java")
 
 ![interface](interface1.png "SearchEngine Optimise")

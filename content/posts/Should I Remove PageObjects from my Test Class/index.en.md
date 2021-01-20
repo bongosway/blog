@@ -6,7 +6,7 @@ lastmod: 2020-07-12T10:32:43+01:00
 description: ""
 resources:
 - name: "featured-image"
-  src:  "language.jpg"
+  src:  "featured-image.jpg"
 
 tags: ["Selenium", "Automation"]
 categories: ["UI Automation"]
@@ -37,7 +37,7 @@ The test class should represent the domain behaviours only, not the implementati
 
 Let's examine an example:
 
-![MySampleTest](/images/po/sample1.png)
+![MySampleTest](sample1.png)
 
 *__Figure 1.1__*
 
@@ -60,7 +60,7 @@ when they "search for" "Selenium" on any "Search engine".
 
 Then:
 
-![RefactoredSampleTest](/images/po/sample2.png)
+![RefactoredSampleTest](sample2.png)
 
 *__Figure 1.2__*
 
@@ -75,7 +75,7 @@ Let's revisit the earlier questions based on the refactored test.
 ```
 -> If the method name changes from `submitSearch()` to `search()`?
 ```
-- `The test only cares about the behaviour and results. Implementation is not the responsibilty of the test`.
+- `The test only cares about the behaviour and results. Implementation is not the responsibility of the test`.
 ```
 -> If the underlying library changes from `Selenium` to `HydrogenSulphur`?
 ```
@@ -88,10 +88,11 @@ As with everything in life, context is key!
 Understand and utilise what is best for your workflow or design decision(s).
 
 However I'd recommend:
-```
+{{< admonition type=tip title="" open=true >}}
 1. Don't let Page Objects bleed into your test.
 2. Test classes should only focus on business scenarios.
 3. Your test should focus on behaviour instead of implementation.
-```
+{{< admonition >}}
+
 
 Now go give your Test Class some :heart:!
