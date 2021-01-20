@@ -19,7 +19,7 @@ series:
 ## Introduction
 Hey everyone! I’m excited to share with you my year end review for 2020.
 
-2020 has been about staying strong mentally! In my family, work, projects and life. 😃
+2020 has been about staying strong mentally! 😃
 
 I’m glad to say that whilst 2020 might have been a tough year, I was able to achieve things I am proud of 💪.
 
@@ -27,7 +27,7 @@ I’m excited at what 2021 is going to bring.
 
 {{< tip >}}
 Philippians 4:8:
--  In conclusion, my friends, fill your minds with those things that are good and that deserve praise: things that are true, noble, right, pure, lovely, and honorable.
+-  In conclusion, my friends, fill your minds with those things that are good and that deserve praise: things that are true, noble, right, pure, lovely, and honourable.
 {{< /tip >}}
 
 
@@ -62,12 +62,13 @@ _Was surprised to see my first attempt at blogging did good for the community._ 
 
 {{< tweet 1309196903964463105 >}}
 
+
 {{< tweet 1321892810488950784 >}}
 
 ## Speaking and Coaching
-- Guest lecturer, teaching students introduction to Test automation
-- Conducted business seminar for a Charity in Colchester (before Covid-19 😉)
-- Coached few testers into leadership roles
+- Guest lecturer, teaching students introduction to Test automation.
+- Conducted business seminar for a Charity in Colchester (before Covid-19 😉).
+- Coached few testers into leadership roles.
 
 ## Open Source
 - The Selenium core team accepted 4 of my Pull requests 🥳

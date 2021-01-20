@@ -1,7 +1,7 @@
 ---
 author:
   name: "Edirin Atumah"
-linktitle: 
+linktitle:
 title: "A Beginner's Guide to Designing Page Objects - Pt.2"
 date: 2020-09-26T03:59:58+01:00
 draft: false
@@ -19,7 +19,7 @@ series:
 ---
 
 ## Introduction
-In the last post we created our first Page Object, (read it [here](/posts/a-beginners-guide-to-designing-page-objects-pt.1) ) we were able to run a test to verify it works as expected. 
+In the last post we created our first Page Object, (read it [here](/posts/a-beginners-guide-to-designing-page-objects-pt.1) ) we were able to run a test to verify it works as expected.
 
 In this guide, we'll apply design principles to refactor the test and page objects we created.
 
@@ -37,33 +37,16 @@ Let's do it :muscle:
 ## Lets start the refactoring with the test class:
 #### GoogleUITest.java
 
-```Java
-public class GoogleUITest {
-
-  WebDriver driver = new ChromeDriver();
-
-  @Test(description = "Google Search displays more than 5 result set")
-  public void search_for_any_item_returns_more_than_5_result_set() {
-    driver.get("google.com");
-
-    GoogleHomePage homePage = new GoogleHomePage(driver);
-
-    SearchResultPage resultPage = 
-    homePage.enterSearchText("Selenium").selectFirstAutoSuggest();
-
-    assertTrue(resultPage.getResultSetCount() > 5);
-}
-```
-
+![test class](/images/po/pg-test.png)
 
 ### What areas we can improve and why:
 
 *RULE:* Your Test Class Should test behaviour NOT implementation.
 
 - `GoogleHomePage homePage = new GoogleHomePage(driver);`
-    - This ties the test to the pageobject implementation of GoogleHomePage, therefore if the pageobject API changes, the test would need to be modified. 
-    
--   `SearchResultPage resultPage = 
+    - This ties the test to the page object implementation of GoogleHomePage, therefore if the page object API changes, the test would need to be modified.
+
+-   `SearchResultPage resultPage =
     homePage.enterSearchText("Selenium").selectFirstAutoSuggest();`
     - How the actions are done is not a concern for the test class i.e if `AutoSuggest` feature is removed, then this test class breaks.
 
@@ -73,7 +56,7 @@ public class GoogleUITest {
 ### Let's rewrite the test class to remove these areas of concern:
 
 #### Step 1:
-- Identify the domain concept and the behaviours connected to it: 
+- Identify the domain concept and the behaviours connected to it:
     - For us it will be:
         - Concept - `SearchEngine` & `SearchResult`
         - Behaviour - `search for a term` & `return results for that term`
@@ -83,26 +66,7 @@ _Using these approach to rewrite the test class, it should now look like this:_
 
 #### RefactoredTest.java
 
-```Java
-public class SearchEngineTest {
-
-  WebDriver driver = new ChromeDriver();
-
-  @Test(description = "Google Search displays more than 5 result set")
-  public void search_for_any_item_returns_more_than_5_result_set() {
-    driver.get("google.com");
-
-    //concept
-    SearchEngine searchEngine = new GoogleSearchEngine(driver); 
-
-                                             //behaviour  
-    SearchResult searchResult = searchEngine.searchFor('Selenium'); 
-
-    //tell, don't ask
-    assertTrue(searchResult.isGreaterThan(5));
-}
-```
-
+![RefactoredTest](/images/po/pg3.png)
 
 Voilà! all the clicks and selects et al have now disappeared!
 
@@ -114,74 +78,19 @@ The test won't concern itself about the underlying search engine in use.
 
 #### Step 2:
 #### 1. Let's build the behaviour as an Interface
-```Java
-public interface SearchEngine {
-  SearchResult searchFor(final String term);
-}
-```
+![interface](/images/po/interface1.png)
 
-#### 2. Let's build an implementation of the Interface using the pageobject to fulfil the needs of the behaviour.
-```Java
-public class GoogleSearchEngine implements SearchEngine {
-  private final WebDriver driver;
+#### 2. Let's build an implementation of the Interface using the page object to fulfil the needs of the behaviour.
 
-  public GoogleSearchEngine(WebDriver driver) {
-    this.driver = driver;
-  }
+![implement interface](/images/po/pg4.png)
 
-  @Override
-  public SearchResult searchFor(String term) {
-    return new GoogleHomePage(driver)
-        .enterSearchText(term)
-        .selectFirstAutoSuggest();
-  }
-}
-```
 
 #### 3. This is the GoogleHomePage PageObject
-```Java
-public class GoogleHomePage {
-  private static final By autoSuggest = By.cssSelector("#searchform ul>li");
-  private static final By searchBox = By.name("q");
-  private WebDriver driver;
+![homePage](/images/po/pg5.png)
 
-  public GoogleHomePage(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public GoogleHomePage enterSearchText(String text) {
-    driver.findElement(searchBox).sendKeys(text);
-    return this;
-  }
-
-  public SearchResults selectFirstAutoSuggest(){
-    //We need to wait for auto suggest to populate
-    WebDriverWait wait = new WebDriverWait(
-      driver, Duration.ofSeconds(10), Duration.ofMillis(100)
-    );
-    
-    wait.until(d -> d.findElement(autoSuggest).isDisplayed());
-
-    //Once auto-suggest loads, we can click the first item
-    driver.findElement(autoSuggest).click();
-
-    return new SearchResultsPage(driver).collectResults();
-  }
-}
-```
 
 #### 4. Let's build the SearchResult
-```Java
-public class SearchResult {
-  private List<Result> resultList;
-
-  // constructor...
-
-  public boolean isGreaterThan(final int number){
-    return resultList.size() > number;
-  }
-}
-```
+![search result](/images/po/pg6.png)
 
 ## What have we done so far?
 - Refactored the test class to contain only behaviour not implementation.
@@ -191,7 +100,7 @@ public class SearchResult {
 - Modify the GoogleHomePage PageObject.
 - Created Domain Class to hold SearchResult.
 
-## See all classes here for easy reference. 
+## See all classes here for easy reference.
 {{< tip >}}
 TIP:
 
@@ -200,91 +109,15 @@ TIP:
 - Read this brilliant [article](https://www.freecodecamp.org/news/the-benefits-of-typing-instead-of-copying-54ed734ad849/) to understand why.
 {{< /tip >}}
 
-```Java
-public class SearchEngineTest {
+![RefactoredTest](/images/po/pg3.png)
 
-  WebDriver driver = new ChromeDriver();
+![interface](/images/po/interface1.png)
 
-  @Test(description = "Google Search displays more than 5 result set")
-  public void search_for_any_item_returns_more_than_5_result_set() {
-    driver.get("google.com");
+![implement interface](/images/po/pg4.png)
 
-    //concept
-    SearchEngine searchEngine = new GoogleSearchEngine(driver); 
+![homePage](/images/po/pg5.png)
 
-                                             //behaviour  
-    SearchResult searchResult = searchEngine.searchFor('Selenium'); 
-
-    //tell, don't ask
-    assertTrue(searchResult.isGreaterThan(5));
-}
-```
-
-```Java
-public interface SearchEngine {
-  SearchResult searchFor(final String term);
-}
-```
-
-```Java
-public class GoogleSearchEngine implements SearchEngine {
-  private final WebDriver driver;
-
-  public GoogleSearchEngine(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  @Override
-  public SearchResult searchFor(String term) {
-    return new GoogleHomePage(driver)
-        .enterSearchText(term)
-        .selectFirstAutoSuggest();
-  }
-}
-```
-
-```Java
-public class GoogleHomePage {
-  private static final By autoSuggest = By.cssSelector("#searchform ul>li");
-  private static final By searchBox = By.name("q");
-  private WebDriver driver;
-
-  public GoogleHomePage(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public GoogleHomePage enterSearchText(String text) {
-    driver.findElement(searchBox).sendKeys(text);
-    return this;
-  }
-
-  public SearchResults selectFirstAutoSuggest(){
-    //We need to wait for auto suggest to populate
-    WebDriverWait wait = new WebDriverWait(
-      driver, Duration.ofSeconds(10), Duration.ofMillis(100)
-    );
-    
-    wait.until(d -> d.findElement(autoSuggest).isDisplayed());
-
-    //Once auto-suggest loads, we can click the first item
-    driver.findElement(autoSuggest).click();
-
-    return new SearchResultsPage(driver).collectResults();
-  }
-}
-```
-
-```Java
-public class SearchResult {
-  private List<Result> resultList;
-
-  // constructor...
-
-  public boolean isGreaterThan(final int number){
-    return resultList.size() > number;
-  }
-}
-```
+![search result](/images/po/pg6.png)
 
 ## Conclusion
 
@@ -293,7 +126,7 @@ Now you can run the test and put your result in the comments section.
 
 
 ## Things to Note
-In the next post in this series, we shall be applying design techniques to optimize the `GoogleHomePage` PageObject. 
+In the next post in this series, we shall be applying design techniques to optimize the `GoogleHomePage` PageObject.
 
 Before then, feel free to write another test using a completely different search engine in the test class and create your implementation of the interface.  
 

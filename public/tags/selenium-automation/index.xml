@@ -1,35 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>selenium, automation on Thought before Tools</title>
-    <link>https://bongosway.github.io/tags/selenium-automation/</link>
-    <description>Recent content in selenium, automation on Thought before Tools</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 26 Sep 2020 03:59:58 +0100</lastBuildDate><atom:link href="https://bongosway.github.io/tags/selenium-automation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>A Beginner&#39;s Guide to Designing Page Objects - Pt.2</title>
-      <link>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</link>
-      <pubDate>Sat, 26 Sep 2020 03:59:58 +0100</pubDate>
-      
-      <guid>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</guid>
-      <description>Introduction In the last post we created our first Page Object, (read it here ) we were able to run a test to verify it works as expected.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>selenium, automation on Thought before Tools</title><link>https://bongosway.github.io/tags/selenium-automation/</link><description>Recent content in selenium, automation on Thought before Tools</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Sat, 26 Sep 2020 03:59:58 +0100</lastBuildDate><atom:link href="https://bongosway.github.io/tags/selenium-automation/index.xml" rel="self" type="application/rss+xml"/><item><title>A Beginner's Guide to Designing Page Objects - Pt.2</title><link>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</link><pubDate>Sat, 26 Sep 2020 03:59:58 +0100</pubDate><guid>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</guid><description>Introduction In the last post we created our first Page Object, (read it here ) we were able to run a test to verify it works as expected.
 In this guide, we&amp;rsquo;ll apply design principles to refactor the test and page objects we created.
 When you&amp;rsquo;re finished, you&amp;rsquo;ll be able to create effective page objects for any UI interface you encounter using design principles.
-Prerequisites Before you begin this guide you&amp;rsquo;ll need the following:</description>
-    </item>
-    
-    <item>
-      <title>A Beginner&#39;s Guide to Designing Page Objects - Pt.1</title>
-      <link>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</link>
-      <pubDate>Sat, 08 Aug 2020 07:57:54 +0100</pubDate>
-      
-      <guid>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</guid>
-      <description>Introduction Page Object is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen) especially when writing test against a web page. This pattern is mainly popularised by the Selenium Browser Automation tool.
+Prerequisites Before you begin this guide you&amp;rsquo;ll need the following:</description></item><item><title>A Beginner's Guide to Designing Page Objects - Pt.1</title><link>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</link><pubDate>Sat, 08 Aug 2020 07:57:54 +0100</pubDate><guid>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</guid><description>Introduction Page Object is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen) especially when writing test against a web page. This pattern is mainly popularised by the Selenium Browser Automation tool.
 In this guide, we create a Page Object for the the Google home and search results page.
-When you&amp;rsquo;re finished, you&amp;rsquo;ll be able to create effective page objects for any UI interface you encounter.</description>
-    </item>
-    
-  </channel>
-</rss>
+When you&amp;rsquo;re finished, you&amp;rsquo;ll be able to create effective page objects for any UI interface you encounter.</description></item></channel></rss>

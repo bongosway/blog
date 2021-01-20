@@ -1,27 +1,9 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Posts on Thought before Tools</title>
-        <link>https://bongosway.github.io/posts/</link>
-        <description>Recent content in Posts on Thought before Tools</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-gb</language>
-        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 01 Jan 2021 15:59:11 +0000</lastBuildDate>
-        <atom:link href="https://bongosway.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>My 2020 In Review: Staying Strong</title>
-            <link>https://bongosway.github.io/posts/my-2020-in-review-staying-strong/</link>
-            <pubDate>Fri, 01 Jan 2021 15:59:11 +0000</pubDate>
-            
-            <guid>https://bongosway.github.io/posts/my-2020-in-review-staying-strong/</guid>
-            <description>Introduction Hey everyone! I’m excited to share with you my year end review for 2020.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Thought before Tools</title><link>https://bongosway.github.io/posts/</link><description>Recent content in Posts on Thought before Tools</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Fri, 01 Jan 2021 15:59:11 +0000</lastBuildDate><atom:link href="https://bongosway.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My 2020 In Review: Staying Strong</title><link>https://bongosway.github.io/posts/my-2020-in-review-staying-strong/</link><pubDate>Fri, 01 Jan 2021 15:59:11 +0000</pubDate><guid>https://bongosway.github.io/posts/my-2020-in-review-staying-strong/</guid><description>Introduction Hey everyone! I’m excited to share with you my year end review for 2020.
 2020 has been about staying strong mentally! In my family, work, projects and life. 😃
 I’m glad to say that whilst 2020 might have been a tough year, I was able to achieve things I am proud of 💪.
 I’m excited at what 2021 is going to bring.
- Philippians 4:8:
- In conclusion, my friends, fill your minds with those things that are good and that deserve praise: things that are true, noble, right, pure, lovely, and honorable.</description>
-            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+Philippians 4:8:
+In conclusion, my friends, fill your minds with those things that are good and that deserve praise: things that are true, noble, right, pure, lovely, and honorable.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>Hey everyone! I’m excited to share with you my year end review for 2020.</p>
 <p>2020 has been about staying strong mentally! In my family, work, projects and life. 😃</p>
 <p>I’m glad to say that whilst 2020 might have been a tough year, I was able to achieve things I am proud of 💪.</p>
@@ -79,9 +61,9 @@ I’m excited at what 2021 is going to bring.
 
 <h2 id="speaking-and-coaching">Speaking and Coaching</h2>
 <ul>
-<li>Guest lecturer, teaching students introduction to Test automation</li>
-<li>Conducted business seminar for a Charity in Colchester (before Covid-19 😉)</li>
-<li>Coached few testers into leadership roles</li>
+<li>Guest lecturer, teaching students introduction to Test automation.</li>
+<li>Conducted business seminar for a Charity in Colchester (before Covid-19 😉).</li>
+<li>Coached few testers into leadership roles.</li>
 </ul>
 <h2 id="open-source">Open Source</h2>
 <ul>
@@ -107,20 +89,10 @@ I’m excited at what 2021 is going to bring.
 <p>Thank you so much for sticking around. 🙇‍🙏</p>
 <p>Look forward to connecting with and learning from you in this new year! 😃🙏👍🤗</p>
 <p>Let&rsquo;s go 🏃‍♂️🏃‍♂️🏃‍♂️ 🚀 🚀 🚀</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>A Beginner&#39;s Guide to Designing Page Objects - Pt.2</title>
-            <link>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</link>
-            <pubDate>Sat, 26 Sep 2020 03:59:58 +0100</pubDate>
-            
-            <guid>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</guid>
-            <description>Introduction In the last post we created our first Page Object, (read it here ) we were able to run a test to verify it works as expected.
+]]></content></item><item><title>A Beginner's Guide to Designing Page Objects - Pt.2</title><link>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</link><pubDate>Sat, 26 Sep 2020 03:59:58 +0100</pubDate><guid>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.2/</guid><description>Introduction In the last post we created our first Page Object, (read it here ) we were able to run a test to verify it works as expected.
 In this guide, we&amp;rsquo;ll apply design principles to refactor the test and page objects we created.
 When you&amp;rsquo;re finished, you&amp;rsquo;ll be able to create effective page objects for any UI interface you encounter using design principles.
-Prerequisites Before you begin this guide you&amp;rsquo;ll need the following:</description>
-            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+Prerequisites Before you begin this guide you&amp;rsquo;ll need the following:</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>In the last post we created our first Page Object, (read it <a href="/posts/a-beginners-guide-to-designing-page-objects-pt.1">here</a> ) we were able to run a test to verify it works as expected.</p>
 <p>In this guide, we&rsquo;ll apply design principles to refactor the test and page objects we created.</p>
 <p>When you&rsquo;re finished, you&rsquo;ll be able to create effective page objects for any UI interface you encounter using design principles.</p>
@@ -370,19 +342,9 @@ Now you can run the test and put your result in the comments section.</p>
 <p>In the next post in this series, we shall be applying design techniques to optimize the <code>GoogleHomePage</code> PageObject.</p>
 <p>Before then, feel free to write another test using a completely different search engine in the test class and create your implementation of the interface.</p>
 <p>I am happy to answer questions you may have, reach me on any of my handles.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>A Beginner&#39;s Guide to Designing Page Objects - Pt.1</title>
-            <link>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</link>
-            <pubDate>Sat, 08 Aug 2020 07:57:54 +0100</pubDate>
-            
-            <guid>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</guid>
-            <description>Introduction Page Object is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen) especially when writing test against a web page. This pattern is mainly popularised by the Selenium Browser Automation tool.
+]]></content></item><item><title>A Beginner's Guide to Designing Page Objects - Pt.1</title><link>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</link><pubDate>Sat, 08 Aug 2020 07:57:54 +0100</pubDate><guid>https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/</guid><description>Introduction Page Object is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen) especially when writing test against a web page. This pattern is mainly popularised by the Selenium Browser Automation tool.
 In this guide, we create a Page Object for the the Google home and search results page.
-When you&amp;rsquo;re finished, you&amp;rsquo;ll be able to create effective page objects for any UI interface you encounter.</description>
-            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+When you&amp;rsquo;re finished, you&amp;rsquo;ll be able to create effective page objects for any UI interface you encounter.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p><a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Page Object</a> is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen) especially when writing test against a web page. This pattern is mainly popularised by the Selenium Browser Automation tool.</p>
 <p>In this guide, we create a Page Object for the the Google <code>home and search results</code> page.</p>
 <p>When you&rsquo;re finished, you&rsquo;ll be able to create effective page objects for any UI interface you encounter.</p>
@@ -652,19 +614,9 @@ Our focus for this guide is to use the browser debug console.</p>
 <li>Apply design techniques to optimize the Page Object design.</li>
 </ul>
 <p>Before then, feel free to write another test and use completely different elements for the user journey. I am happy to answer questions you may have, reach me on any of my handles.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Should I Remove PageObjects from my Test Class?</title>
-            <link>https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/</link>
-            <pubDate>Sun, 12 Jul 2020 10:32:43 +0100</pubDate>
-            
-            <guid>https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/</guid>
-            <description>The short answer is YES!
+]]></content></item><item><title>Should I Remove PageObjects from my Test Class?</title><link>https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/</link><pubDate>Sun, 12 Jul 2020 10:32:43 +0100</pubDate><guid>https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/</guid><description>The short answer is YES!
 Introduction The Page Object Pattern is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen). Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.
-Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation.</description>
-            <content type="html"><![CDATA[<p><strong><em>The short answer is YES!</em></strong></p>
+Why? The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class The test class should represent the domain behaviours only, not the implementation.</description><content type="html"><![CDATA[<p><strong><em>The short answer is YES!</em></strong></p>
 <h2 id="introduction">Introduction</h2>
 <p>The <a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Page Object Pattern</a> is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen).
 Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.</p>
@@ -742,21 +694,11 @@ wrapper classes are used to represent the business language.</p>
 2. Test classes should only focus on business scenarios.
 3. Your test should focus on behaviour instead of implementation.
 </code></pre><p>Now go give your Test Class some :heart:!</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>How to solve the NoSuchMethodError toImmutableSet() error when using Google Autoservice</title>
-            <link>https://bongosway.github.io/posts/how-to-solve-the-nosuchmethoderror-toimmutableset-error-when-using-google-autoservice/</link>
-            <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://bongosway.github.io/posts/how-to-solve-the-nosuchmethoderror-toimmutableset-error-when-using-google-autoservice/</guid>
-            <description>Introduction Whilst building a demo application showcasing google AutoService, I encountered the below error:
- java.lang.NoSuchMethodError: com.google.common.collect.ImmutableSet.toImmutableSet()Ljava/util/stream/Collector; Searching through the internet, most solutions recommended upgrading the Google Guava version but that did not resolve the problem.
+]]></content></item><item><title>How to solve the NoSuchMethodError toImmutableSet() error when using Google Autoservice</title><link>https://bongosway.github.io/posts/how-to-solve-the-nosuchmethoderror-toimmutableset-error-when-using-google-autoservice/</link><pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate><guid>https://bongosway.github.io/posts/how-to-solve-the-nosuchmethoderror-toimmutableset-error-when-using-google-autoservice/</guid><description>Introduction Whilst building a demo application showcasing google AutoService, I encountered the below error:
+java.lang.NoSuchMethodError: com.google.common.collect.ImmutableSet.toImmutableSet()Ljava/util/stream/Collector; Searching through the internet, most solutions recommended upgrading the Google Guava version but that did not resolve the problem.
 The main cause of this error, was putting the wrong Autoservice dependency in the classpath.
 If your POM file has the below dependency, then you are most likely get this error.
-&amp;lt;/dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.google.auto.service&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;auto-service&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.</description>
-            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+&amp;lt;/dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.google.auto.service&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;auto-service&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>Whilst building a demo application showcasing google
 <a href="https://github.com/google/auto/tree/master/service">AutoService</a>, I encountered the below error:</p>
 <pre><code> java.lang.NoSuchMethodError: com.google.common.collect.ImmutableSet.toImmutableSet()Ljava/util/stream/Collector;
@@ -836,8 +778,4 @@ META-INF/services/org.ihq.MyAutoclass
 
 </code></pre><h2 id="conclusion">Conclusion</h2>
 <p>You’ve set up <code>Google AutoService</code> with <code>Maven</code> to autogenerate metadata without compile error(s).</p>
-]]></content>
-        </item>
-        
-    </channel>
-</rss>
+]]></content></item></channel></rss>

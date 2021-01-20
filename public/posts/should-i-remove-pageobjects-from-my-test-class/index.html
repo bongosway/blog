@@ -1,354 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="map[name:Edirin Atumah]">
-<meta name="description" content="The short answer is YES!
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content="map[name:Edirin Atumah]"><meta name=description content="The short answer is YES!
 Introduction The Page Object Pattern is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen). Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.
-Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation." />
-<meta name="keywords" content="Test Automation, Selenium, BDD, Cucumber, Test Framework, testing, selenium, testng, junit" />
-<meta name="robots" content="noodp" />
-<meta name="theme-color" content="#252627" />
-<link rel="canonical" href="https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/" />
-
-
-    <title>
-        
-            Should I Remove PageObjects from my Test Class? :: Thought before Tools 
-        
-    </title>
-
-
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
-    type="text/css">
-
-
-
-<link rel="stylesheet" href="/main.50cff2563f52b2f25b21b53ba23f7ec17630166f7f4cf0931a9ffa7ca6de8574.css">
-
-
-
-    
-        <link rel="stylesheet" type="text/css" href="/css/all.min.css">
-    
-
-
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="msapplication-TileColor" content="#252627">
-    <meta name="theme-color" content="#252627">
-
-
-
-<meta itemprop="name" content="Should I Remove PageObjects from my Test Class?">
-<meta itemprop="description" content="The short answer is YES!
+Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation."><meta name=keywords content="Test Automation,Selenium,BDD,Cucumber,Test Framework,testing,selenium,testng,junit"><meta name=robots content="noodp"><meta name=theme-color content="#252627"><link rel=canonical href=https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/><title>Should I Remove PageObjects from my Test Class? :: Thought before Tools</title><link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css rel=stylesheet type=text/css><link rel=stylesheet href=/main.50cff2563f52b2f25b21b53ba23f7ec17630166f7f4cf0931a9ffa7ca6de8574.css><link rel=stylesheet type=text/css href=/css/all.min.css><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#252627><link rel="shortcut icon" href=/favicon.ico><meta name=msapplication-TileColor content="#252627"><meta name=theme-color content="#252627"><meta itemprop=name content="Should I Remove PageObjects from my Test Class?"><meta itemprop=description content="The short answer is YES!
 Introduction The Page Object Pattern is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen). Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.
-Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation.">
-<meta itemprop="datePublished" content="2020-07-12T10:32:43+01:00" />
-<meta itemprop="dateModified" content="2020-07-12T10:32:43+01:00" />
-<meta itemprop="wordCount" content="493">
-<meta itemprop="image" content="https://bongosway.github.io/"/>
-
-
-
-<meta itemprop="keywords" content="testing, selenium, testng, junit," />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://bongosway.github.io/"/>
-
-<meta name="twitter:title" content="Should I Remove PageObjects from my Test Class?"/>
-<meta name="twitter:description" content="The short answer is YES!
+Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation."><meta itemprop=datePublished content="2020-07-12T10:32:43+01:00"><meta itemprop=dateModified content="2020-07-12T10:32:43+01:00"><meta itemprop=wordCount content="493"><meta itemprop=image content="https://bongosway.github.io/"><meta itemprop=keywords content="testing, selenium, testng, junit,"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://bongosway.github.io/"><meta name=twitter:title content="Should I Remove PageObjects from my Test Class?"><meta name=twitter:description content="The short answer is YES!
 Introduction The Page Object Pattern is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen). Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.
-Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation."/>
-
-
-
-    <meta property="og:title" content="Should I Remove PageObjects from my Test Class?" />
-<meta property="og:description" content="The short answer is YES!
+Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation."><meta property="og:title" content="Should I Remove PageObjects from my Test Class?"><meta property="og:description" content="The short answer is YES!
 Introduction The Page Object Pattern is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen). Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.
-Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/" />
-<meta property="og:image" content="https://bongosway.github.io/"/>
-<meta property="article:published_time" content="2020-07-12T10:32:43+01:00" />
-<meta property="article:modified_time" content="2020-07-12T10:32:43+01:00" />
+Why?  The test class is no longer isolated from internal code changes Binds the test class to the underlying technology/library Low-level code details pollute the test class  The test class should represent the domain behaviours only, not the implementation."><meta property="og:type" content="article"><meta property="og:url" content="https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/"><meta property="og:image" content="https://bongosway.github.io/"><meta property="article:published_time" content="2020-07-12T10:32:43+01:00"><meta property="article:modified_time" content="2020-07-12T10:32:43+01:00"><meta property="article:published_time" content="2020-07-12 10:32:43 +0100 BST"></head><body class=dark-theme><div class=container><header class=header><span class=header__inner><a href=/ style=text-decoration:none><div class=logo><span class=logo__mark>></span>
+<span class=logo__text>$ cd /home/</span>
+<span class=logo__cursor></span></div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=https://bongosway.github.io/posts/>Posts</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41C32.4934 41 41 32.4934 41 22 41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>3 minutes
+|
+<i class="fas fa-user"></i>Edirin Atumah
+| <i class="fas fa-calendar-alt"></i>Jul 12, 2020</p></div><article><h1 class=post-title><a href=https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/>Should I Remove PageObjects from my Test Class?</a></h1><figure><img src=/images/language.jpg class=post-cover><figcaption><h5></h5></figcaption></figure><div class=post-content><p><strong><em>The short answer is YES!</em></strong></p><h2 id=introduction>Introduction</h2><p>The <a href=https://github.com/SeleniumHQ/selenium/wiki/PageObjects>Page Object Pattern</a> is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen).
+Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.</p><h2 id=why>Why?</h2><ol><li>The test class is no longer isolated from internal code changes</li><li>Binds the test class to the underlying technology/library</li><li>Low-level code details pollute the test class</li></ol><p>The test class should represent the domain behaviours only, not the implementation. There are benefits to doing this:</p><ol><li>Your test is readable by engineers and non-technical colleagues</li><li>Your test is resistant to superficial changes. Only a change to the domain behaviour will cause your test class change.</li><li>Your test is technology agnostic, i.e. you are not bound to a particular technology.</li><li>It improves discoverability for users of your framework.</li></ol><p>Let&rsquo;s examine an example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MySampleTest</span> <span style=color:#f92672>{</span>
+    WebDriver driver <span style=color:#f92672>=</span> getDriver<span style=color:#f92672>();</span>
+    driver<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;http://www.google.com&#34;</span><span style=color:#f92672>);</span>
 
+    <span style=color:#a6e22e>@Test</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>googleSearchTest</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+    GoogleHomePage googleHomePage <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> GoogleHomePage<span style=color:#f92672>();</span>
+    googleHomePage<span style=color:#f92672>.</span><span style=color:#a6e22e>enterSearchTerm</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;page object&#34;</span><span style=color:#f92672>);</span>
+    googleHomePage<span style=color:#f92672>.</span><span style=color:#a6e22e>submitSearch</span><span style=color:#f92672>();</span>
 
-
-
-
-
-
-    <meta property="article:published_time" content="2020-07-12 10:32:43 &#43;0100 BST" />
-
-
-
-
-
-
-
-
-    </head>
-
-    <body class="dark-theme">
-        <div class="container">
-            <header class="header">
-    <span class="header__inner">
-        <a href="/" style="text-decoration: none;">
-    <div class="logo">
-        
-            <span class="logo__mark">></span>
-            <span class="logo__text">$ cd /home/</span>
-            <span class="logo__cursor" style=
-                  "
-                   
-                   ">
-            </span>
-        
-    </div>
-</a>
-
-
-        <span class="header__right">
-            
-                <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://bongosway.github.io/posts/">Posts</a></li>
-    </ul>
-</nav>
-
-                <span class="menu-trigger">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
-                </span>
-            
-
-            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-</svg>
-</span>
-        </span>
-    </span>
-</header>
-
-
-            <div class="content">
-                
-  <main class="post">
-
-    <div class="post-info">
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-          <circle cx="12" cy="12" r="10"></circle>
-          <polyline points="12 6 12 12 16 14"></polyline>
-        </svg>
-        3 minutes
-        | 
-        <i class="fas fa-user"></i> Edirin Atumah
-        | <i class="fas fa-calendar-alt"></i> Jul 12, 2020
-
-        
-      </p>
-    </div>
-
-    <article>
-      <h1 class="post-title">
-        <a href="https://bongosway.github.io/posts/should-i-remove-pageobjects-from-my-test-class/">Should I Remove PageObjects from my Test Class?</a>
-      </h1>
-
-      
-        <figure>
-          <img src="/images/language.jpg" class="post-cover" />
-         
-          <figcaption>
-            <h5> </h5>
-          </figcaption>
-        </figure>
-   
-
-      <div class="post-content">
-        <p><strong><em>The short answer is YES!</em></strong></p>
-<h2 id="introduction">Introduction</h2>
-<p>The <a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Page Object Pattern</a> is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen).
-Whilst this is a good pattern to drive the application under test, it should not be visible to the test class.</p>
-<h2 id="why">Why?</h2>
-<ol>
-<li>The test class is no longer isolated from internal code changes</li>
-<li>Binds the test class to the underlying technology/library</li>
-<li>Low-level code details pollute the test class</li>
-</ol>
-<p>The test class should represent the domain behaviours only, not the implementation. There are benefits to doing this:</p>
-<ol>
-<li>Your test is readable by engineers and non-technical colleagues</li>
-<li>Your test is resistant to superficial changes. Only a change to the domain behaviour will cause your test class change.</li>
-<li>Your test is technology agnostic, i.e. you are not bound to a particular technology.</li>
-<li>It improves discoverability for users of your framework.</li>
-</ol>
-<p>Let&rsquo;s examine an example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySampleTest</span> <span style="color:#f92672">{</span>
-    WebDriver driver <span style="color:#f92672">=</span> getDriver<span style="color:#f92672">();</span>
-    driver<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://www.google.com&#34;</span><span style="color:#f92672">);</span>
-
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">googleSearchTest</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    GoogleHomePage googleHomePage <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> GoogleHomePage<span style="color:#f92672">();</span>
-    googleHomePage<span style="color:#f92672">.</span><span style="color:#a6e22e">enterSearchTerm</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;page object&#34;</span><span style="color:#f92672">);</span>
-    googleHomePage<span style="color:#f92672">.</span><span style="color:#a6e22e">submitSearch</span><span style="color:#f92672">();</span>
-
-    assertEquals<span style="color:#f92672">(</span>driver<span style="color:#f92672">.</span><span style="color:#a6e22e">getTitle</span><span style="color:#f92672">(),</span> <span style="color:#e6db74">&#34;page object - Google Search&#34;</span><span style="color:#f92672">);</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p><em><strong>Figure 1.1</strong></em></p>
-<p>From the above code, think about what happens in the following scenario:</p>
-<p>a. The search engine changes from <code>Google</code> to <code>Bing</code></p>
-<p>b. If the method name changes from <code>submitSearch()</code> to <code>search()</code></p>
-<p>c. If the underlying library changes from <code>Selenium</code> to <code>HydrogenSulphur</code>?</p>
-<p>Let&rsquo;s refactor the test class in <em><strong>Figure 1.1</strong></em> to focus on the domain behaviour removing the Page Object.</p>
-<p>Assume the tests verifies:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">The company name is the &#34;first link text&#34; in &#34;Search Results&#34; 
+    assertEquals<span style=color:#f92672>(</span>driver<span style=color:#f92672>.</span><span style=color:#a6e22e>getTitle</span><span style=color:#f92672>(),</span> <span style=color:#e6db74>&#34;page object - Google Search&#34;</span><span style=color:#f92672>);</span>
+  <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p><em><strong>Figure 1.1</strong></em></p><p>From the above code, think about what happens in the following scenario:</p><p>a. The search engine changes from <code>Google</code> to <code>Bing</code></p><p>b. If the method name changes from <code>submitSearch()</code> to <code>search()</code></p><p>c. If the underlying library changes from <code>Selenium</code> to <code>HydrogenSulphur</code>?</p><p>Let&rsquo;s refactor the test class in <em><strong>Figure 1.1</strong></em> to focus on the domain behaviour removing the Page Object.</p><p>Assume the tests verifies:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-plain data-lang=plain>The company name is the &#34;first link text&#34; in &#34;Search Results&#34; 
 when they &#34;search for&#34; &#34;Selenium&#34; on any &#34;Search engine&#34;. 
-</code></pre></div><p>(Note: this is a trivia example, for illustration only)</p>
-<p>Then:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RefactoredSampleTest</span> <span style="color:#f92672">{</span>
-    SearchEngine searchEngine <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SearchEngine<span style="color:#f92672">();</span>
+</code></pre></div><p>(Note: this is a trivia example, for illustration only)</p><p>Then:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>RefactoredSampleTest</span> <span style=color:#f92672>{</span>
+    SearchEngine searchEngine <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> SearchEngine<span style=color:#f92672>();</span>
 
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">orgNameIs_1st_ForSearchTerm_Selenium</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    SearchResult result <span style="color:#f92672">=</span> searchEngine<span style="color:#f92672">.</span><span style="color:#a6e22e">searchFor</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Selenium&#34;</span><span style="color:#f92672">);</span>
+    <span style=color:#a6e22e>@Test</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>orgNameIs_1st_ForSearchTerm_Selenium</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+    SearchResult result <span style=color:#f92672>=</span> searchEngine<span style=color:#f92672>.</span><span style=color:#a6e22e>searchFor</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Selenium&#34;</span><span style=color:#f92672>);</span>
 
-    assertEquals<span style="color:#f92672">(</span>
-        result<span style="color:#f92672">.</span><span style="color:#a6e22e">firstLinkText</span><span style="color:#f92672">(),</span> <span style="color:#e6db74">&#34;The Selenium Browser Automation Project&#34;</span>
-    <span style="color:#f92672">);</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p><em><strong>Figure 1.2</strong></em></p>
-<p>As you can see there are no references to any page objects, instead domain
-wrapper classes are used to represent the business language.</p>
-<p>Let&rsquo;s revisit the earlier questions based on the refactored test.</p>
-<pre><code>-&gt; The search engine changes from `Google` to `Bing`?
-</code></pre><ul>
-<li><code>Test class is not aware of what engine is doing the search, so the test doesn't need to change</code></li>
-</ul>
-<pre><code>-&gt; If the method name changes from `submitSearch()` to `search()`?
-</code></pre><ul>
-<li><code>The test only cares about the behaviour and results. Implementation is not the responsibilty of the test</code>.</li>
-</ul>
-<pre><code>-&gt; If the underlying library changes from `Selenium` to `HydrogenSulphur`?
-</code></pre><ul>
-<li><code>The Test class is not bound to a specific library. In fact, you can use it as an API test without needing to change a single line</code></li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>As with everything in life, context is key!</p>
-<p>Understand and utilise what is best for your workflow or design decision(s).</p>
-<p>However I&rsquo;d recommend:</p>
-<pre><code>1. Don't let Page Objects bleed into your test. 
+    assertEquals<span style=color:#f92672>(</span>
+        result<span style=color:#f92672>.</span><span style=color:#a6e22e>firstLinkText</span><span style=color:#f92672>(),</span> <span style=color:#e6db74>&#34;The Selenium Browser Automation Project&#34;</span>
+    <span style=color:#f92672>);</span>
+  <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p><em><strong>Figure 1.2</strong></em></p><p>As you can see there are no references to any page objects, instead domain
+wrapper classes are used to represent the business language.</p><p>Let&rsquo;s revisit the earlier questions based on the refactored test.</p><pre><code>-&gt; The search engine changes from `Google` to `Bing`?
+</code></pre><ul><li><code>Test class is not aware of what engine is doing the search, so the test doesn't need to change</code></li></ul><pre><code>-&gt; If the method name changes from `submitSearch()` to `search()`?
+</code></pre><ul><li><code>The test only cares about the behaviour and results. Implementation is not the responsibilty of the test</code>.</li></ul><pre><code>-&gt; If the underlying library changes from `Selenium` to `HydrogenSulphur`?
+</code></pre><ul><li><code>The Test class is not bound to a specific library. In fact, you can use it as an API test without needing to change a single line</code></li></ul><h2 id=conclusion>Conclusion</h2><p>As with everything in life, context is key!</p><p>Understand and utilise what is best for your workflow or design decision(s).</p><p>However I&rsquo;d recommend:</p><pre><code>1. Don't let Page Objects bleed into your test. 
 2. Test classes should only focus on business scenarios.
 3. Your test should focus on behaviour instead of implementation.
-</code></pre><p>Now go give your Test Class some :heart:!</p>
-
-      </div>
-                <div class="center">
-                    &nbsp; <a href="https://twitter.com/bongosway" target="_blank" rel="noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a> &nbsp;&nbsp; <a href="mailto:dumbdev@gmail.com" target="_blank" rel="noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a> &nbsp;&nbsp; <a href="https://github.com/bongosway" target="_blank" rel="noopener" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a> &nbsp;&nbsp; <a href="https://linkedin.com/edirinatumah" target="_blank" rel="noopener" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> &nbsp;
-                </div>
-
-    </article>
-
-    <hr />
-
-    <div class="post-info">
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
-            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-            <line x1="7" y1="7" x2="7" y2="7"></line>
-          </svg><span class="tag"><a href="https://bongosway.github.io/tags/testing-selenium-testng-junit/">testing, selenium, testng, junit</a></span>
-        </p>
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-          <polyline points="10 9 9 9 8 9"></polyline>
-        </svg>
-        493 Words
-      </p>
-    </div>
-
-    
-      <div class="pagination">
-        <div class="pagination__title">
-          <span class="pagination__title-h"></span>
-          <hr />
-        </div>
-
-        <div class="pagination__buttons">
-          
-            <span class="button previous">
-              <a href="https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/">
-                <span class="button__icon">←</span>
-                <span class="button__text">A Beginner&#39;s Guide to Designing Page Objects - Pt.1</span>
-              </a>
-            </span>
-          
-
-          
-            <span class="button next">
-              <a href="https://bongosway.github.io/posts/how-to-solve-the-nosuchmethoderror-toimmutableset-error-when-using-google-autoservice/">
-                <span class="button__text">How to solve the NoSuchMethodError toImmutableSet() error when using Google Autoservice</span>
-                <span class="button__icon">→</span>
-              </a>
-            </span>
-          
-        </div>
-      </div>
-    
-
-
-    
-
-  </main>
-
-            </div>
-
-            
-                <footer class="footer">
-    <div class="footer__inner">
-        <div class="footer__content">
-            <span>&copy; 2021</span>
-            
-                <span><a href="https://bongosway.github.io/">Edirin Atumah</a></span>
-            
-          
-            <span> <a href="https://bongosway.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
-        </div>
-    </div>
-   
-</footer>
-
-            
-        </div>
-
-        
-
-
-
-
-<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
-
-
-
-    </body>
-</html>
+</code></pre><p>Now go give your Test Class some :heart:!</p></div><div class=center>&nbsp; <a href=https://twitter.com/bongosway target=_blank rel=noopener title=Twitter><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg></a>&nbsp;&nbsp; <a href=mailto:dumbdev@gmail.com target=_blank rel=noopener title=Email><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1.0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1.0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>&nbsp;&nbsp; <a href=https://github.com/bongosway target=_blank rel=noopener title=Github><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77a5.44 5.44.0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a>&nbsp;&nbsp; <a href=https://linkedin.com/edirinatumah target=_blank rel=noopener title=Linkedin><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>&nbsp;</div></article><hr><div class=post-info><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://bongosway.github.io/tags/testing-selenium-testng-junit/>testing, selenium, testng, junit</a></span></p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>493 Words</p></div><div class=pagination><div class=pagination__title><span class=pagination__title-h></span><hr></div><div class=pagination__buttons><span class="button previous"><a href=https://bongosway.github.io/posts/a-beginners-guide-to-designing-page-objects-pt.1/><span class=button__icon>←</span>
+<span class=button__text>A Beginner's Guide to Designing Page Objects - Pt.1</span></a></span>
+<span class="button next"><a href=https://bongosway.github.io/posts/how-to-solve-the-nosuchmethoderror-toimmutableset-error-when-using-google-autoservice/><span class=button__text>How to solve the NoSuchMethodError toImmutableSet() error when using Google Autoservice</span>
+<span class=button__icon>→</span></a></span></div></div></main></div><footer class=footer><div class=footer__inner><div class=footer__content><span>&copy; 2021</span>
+<span><a href=https://bongosway.github.io/>Edirin Atumah</a></span>
+<span><a href=https://bongosway.github.io/posts/index.xml target=_blank title=rss><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a></span></div></div></footer></div><script type=text/javascript src=/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js integrity="sha512-3HFukJLJggt3+W2ilNASCu6xibW86pdSMJ6+on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script></body></html>

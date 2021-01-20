@@ -7,12 +7,15 @@ date: {{ .Date }}
 draft: true
 toc: false
 type:
+- post
+- posts
 weight: 10
-Cover:
+Cover: " "
+Credit: " "
 tags:
   - untagged
 series:
-    -
+    - none
 ---
 
 ## Introduction

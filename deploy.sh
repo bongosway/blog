@@ -8,6 +8,13 @@ printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 # Build the project.
 hugo --gc --minify # if using a theme, replace with `hugo -t <YOURTHEME>`
 
+git add .
+msg="update blog repository $(date)"
+if [ -n "$*" ]; then
+	msg="$*"
+fi
+git push origin master
+
 # Go To Public folder
 cd bongosway.github.io
 
@@ -22,14 +29,6 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git push origin master
-
-cd ..
-git add .
-msg="update blog repository $(date)"
-if [ -n "$*" ]; then
-	msg="$*"
-fi
 git push origin master
 
 printf "\033[0;32mDeploying updates done...\033[0m\n"

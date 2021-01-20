@@ -1,7 +1,7 @@
 ---
 author:
   name: "Edirin Atumah"
-linktitle: 
+linktitle:
 title: "A Beginner's Guide to Designing Page Objects - Pt.1"
 date: 2020-08-08T07:57:54+01:00
 draft: false
@@ -19,7 +19,7 @@ series:
 ---
 
 ## Introduction
-[Page Object](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen) especially when writing test against a web page. This pattern is mainly popularised by the Selenium Browser Automation tool. 
+[Page Object](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) is a popular design pattern used to represent services provided by a page (reads the rendered page you see on your screen) especially when writing test against a web page. This pattern is mainly popularised by the Selenium Browser Automation tool.
 
 In this guide, we create a Page Object for the the Google `home and search results` page.
 
@@ -30,7 +30,7 @@ When you're finished, you'll be able to create effective page objects for any UI
 Before you begin this guide you'll need the following:
 
 - An IDE (I use [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/))
-- [Maven](https://maven.apache.org/) 
+- [Maven](https://maven.apache.org/)
     - See [Installation help here](https://www.baeldung.com/install-maven-on-windows-linux-mac)
 - A Selenium project that compiles (selenium version 4 and above)
 - TestNG
@@ -47,7 +47,7 @@ Let's do it :muscle:
 We want to verify that the results page displays more than five links.
 
 ###  User journey
-We need to figure out the user journey that makes up the test. 
+We need to figure out the user journey that makes up the test.
 
 - Goto `google.com`
 - Type `Selenium` in the searchbox
@@ -59,24 +59,7 @@ Writing test first helps you get a clear picture of what Page Objects to build, 
 ###  Test Class
 #### GoogleUITest.java
 
-```Java
-public class GoogleUITest {
-
-  WebDriver driver = new ChromeDriver();
-
-  @Test(description = "Google Search displays more than 5 result set")
-  public void search_for_any_item_returns_more_than_5_result_set() {
-    driver.get("google.com");
-
-    GoogleHomePage homePage = new GoogleHomePage(driver);
-
-    SearchResultPage resultPage = 
-    homePage.enterSearchText("Selenium").selectFirstAutoSuggest();
-
-    assertTrue(resultPage.getResultSetCount() > 5);
-}
-```
-
+![test class](/images/po/pg-test.png)
 
 Now we need to:
 
@@ -94,7 +77,7 @@ From the picture above, there are multiple elements on the page, but we only nee
 
 {{< tip >}}
 Tip:
-- Don't make your page object a kitchen sink by selecting every possible object you see on the page. 
+- Don't make your page object a kitchen sink by selecting every possible object you see on the page.
 Select only elements relevant for the user journey, anything more becomes [YAGNI](https://www.martinfowler.com/bliki/Yagni.html)
 {{< /tip >}}
 
@@ -115,7 +98,7 @@ We locate our first element - The `Searchbox`
 
 ![element picker](/images/po/element-picker.png)
 
-- Point the element picker at the `Searchbox`, then click. 
+- Point the element picker at the `Searchbox`, then click.
 
 ![find element](/images/po/find-element.png)
 
@@ -129,18 +112,18 @@ Note down the selector `name=q`, because we need it to create our Page Object.
 Next, we locate the second element - The `Auto-suggest` box
 - Type any text on the searchbox and `Auto-suggest` box should appear
 - Click on the element picker
-- Point the element picker at the `Auto-suggest` box, then click. 
+- Point the element picker at the `Auto-suggest` box, then click.
 
 ![auto suggest](/images/po/auto-suggest.png)
 
 Note down the selector `#searchform ul>li`, because we need it to create our Page Object.
 
 
-Next, we locate the third element - The `The results element in the search result page` 
+Next, we locate the third element - The `The results element in the search result page`
 - Type any text on the searchbox and `Auto-suggest` box should appear
 - Click on the first suggestion, which should transition to `results page`
 - Click on the element picker
-- Point the element picker at the `result set` box, then click. 
+- Point the element picker at the `result set` box, then click.
 
 Note down the selector `class=g`, because we need it to create our Page Object.
 
@@ -162,54 +145,11 @@ Now that we have all the elements we need, Let's build the Page Object
 
 ### GoogleHomePage.java
 
-```Java
-public class GoogleHomePage {
-  private static final By autoSuggest = By.cssSelector("#searchform ul>li");
-  private static final By searchBox = By.name("q");
-  private WebDriver driver;
-
-  public GoogleHomePage(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public GoogleHomePage enterSearchText(String text) {
-    driver.findElement(searchBox).sendKeys(text);
-    return this;
-  }
-
-  public SearchResultsPage selectFirstAutoSuggest(){
-    //We need to wait for auto suggest to populate
-    WebDriverWait wait = new WebDriverWait(
-      driver, Duration.ofSeconds(10), Duration.ofMillis(100)
-    );
-    
-    wait.until(d -> d.findElement(autoSuggest).isDisplayed());
-
-    //Once auto-suggest loads, we can click the first item
-    driver.findElement(autoSuggest).click();
-
-    return new SearchResultsPage(driver);
-  }
-}
-```
+![google home page object](/images/po/pg1.png)
 
 ### SearchResultsPage.java
 
-```Java
-public class SearchResultsPage {
-  private static final By results = By.className("g");
-  private WebDriver driver;
-
-  public SearchResultsPage(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public int getResultSetCount(){
-    List<WebElement> resultsCount = driver.findElements(results);
-    return resultsCount.size();
-  }
-}
-```
+![search result page](/images/po/pg2.png)
 
 ## What have we done so far?
 - We defined what we are testing
@@ -218,7 +158,7 @@ public class SearchResultsPage {
 - Confirmed we have the correct element using the console
 - Created the page object with the correcet locators.
 
-## See all classes here for easy reference. 
+## See all classes here for easy reference.
 {{< tip >}}
 TIP:
 
@@ -227,68 +167,13 @@ TIP:
 - Read this brilliant [article](https://www.freecodecamp.org/news/the-benefits-of-typing-instead-of-copying-54ed734ad849/) to understand why.
 {{< /tip >}}
 
-```Java
-public class GoogleUITest {
-
-  WebDriver driver = new ChromeDriver();
-
-  @Test(description = "Google Search displays more than 5 result set")
-  public void search_for_any_item_returns_more_than_5_result_set() {
-    driver.get("google.com");
-
-    GoogleHomePage homePage = new GoogleHomePage(driver);
-
-    SearchResultPage resultPage = 
-    homePage.enterSearchText("Selenium").selectFirstAutoSuggest();
-
-    assertTrue(resultPage.getResultSetCount() > 5);
-}
-```
+![test class](/images/po/pg-test.png)
 
 
-```Java
-public class GoogleHomePage {
-  private static final By autoSuggest = By.cssSelector("#searchform ul>li");
-  private static final By searchBox = By.name("q");
-  private WebDriver driver;
+![google home page object](/images/po/pg1.png)
 
-  public GoogleHomePage(WebDriver driver) {
-    this.driver = driver;
-  }
 
-  public GoogleHomePage enterSearchText(String text) {
-    driver.findElement(searchBox).sendKeys(text);
-    return this;
-  }
-
-  public SearchResultsPage selectFirstAutoSuggest(){
-    WebDriverWait wait = new WebDriverWait(
-      driver, Duration.ofSeconds(10), Duration.ofMillis(100)
-    );
-
-    wait.until(d -> d.findElement(autoSuggest).isDisplayed());
-    driver.findElement(autoSuggest).click();
-
-    return new SearchResultsPage(driver);
-  }
-}
-```
-
-```Java
-public class SearchResultsPage {
-  private static final By results = By.className("g");
-  private WebDriver driver;
-
-  public SearchResultsPage(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public int getResultSetCount(){
-    List<WebElement> resultsCount = driver.findElements(results);
-    return resultsCount.size();
-  }
-}
-```
+![search result page](/images/po/pg2.png)
 
 ## Conclusion
 
@@ -297,6 +182,6 @@ In this article you set up your first Page Object. Now you can run the test and 
 
 ## Things to Note
 Read [next post](/posts/a-beginners-guide-to-designing-page-objects-pt.2) in the series
-- Apply design techniques to optimize the Page Object design. 
+- Apply design techniques to optimize the Page Object design.
 
 Before then, feel free to write another test and use completely different elements for the user journey. I am happy to answer questions you may have, reach me on any of my handles.

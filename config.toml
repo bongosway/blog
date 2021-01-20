@@ -2,7 +2,9 @@ baseURL = "https://bongosway.github.io/"
 title   = "Thought before Tools"
 languageCode = "en-gb"
 theme = "hugo-theme-hello-friend-ng"
-
+publishDir   = "bongosway.github.io"
+googleAnalytics = "UA-172590795-1"
+disqusShortname = "bongosway"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -10,19 +12,14 @@ PygmentsStyle = "monokai"
 [markup.goldmark.renderer]
 unsafe= true
 
-
 paginate  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-
-googleAnalytics = "UA-172590795-1"
-disqusShortname = "bongosway"
 
 archetypeDir = "archetypes"
 contentDir   = "content"
 dataDir      = "data"
 layoutDir    = "layouts"
-publishDir   = "bongosway.github.io"
 
 buildDrafts  = false
 buildFuture  = false
