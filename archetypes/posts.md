@@ -1,21 +1,17 @@
 ---
-author:
-  name: "Edirin Atumah"
-linktitle:
+weight: 4
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
-toc: false
-type:
-- post
-- posts
-weight: 10
-Cover: " "
-Credit: " "
-tags:
-  - untagged
-series:
-    - none
+lastmod: {{ .Date }}
+description: ""
+resources:
+- name: "featured-image"
+  src:  "featured-image.png"
+
+tags: ["", ""]
+categories: [""]
+
+lightgallery: true
 ---
 
 ## Introduction

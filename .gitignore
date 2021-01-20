@@ -12,3 +12,4 @@ package-lock.json
 DS_Store
 
 themes/hello-friend-ng/exampleSite
+**/exampleSite
